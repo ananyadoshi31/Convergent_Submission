@@ -56,7 +56,6 @@ export async function POST(request: NextRequest) {
       product_quality: newState.product_quality,
       status: newState.status,
       cumulative_profit: newState.cumulative_profit,
-      updated_at: new Date().toISOString(),
     })
     .eq("game_id", game.id);
 
