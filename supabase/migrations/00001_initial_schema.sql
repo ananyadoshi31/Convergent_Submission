@@ -19,6 +19,7 @@ CREATE TABLE game_states (
   sales_staff INT NOT NULL DEFAULT 2,
   product_quality DECIMAL(6, 2) NOT NULL DEFAULT 50,
   status TEXT NOT NULL DEFAULT 'playing' CHECK (status IN ('playing', 'won', 'lost')),
+  cumulative_profit DECIMAL(15, 2) NOT NULL DEFAULT 0,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE(game_id)
 );
